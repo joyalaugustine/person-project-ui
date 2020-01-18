@@ -17,9 +17,6 @@
           <td>{{person.firstName}}</td>
           <td>{{person.lastName}}</td>
           <td>{{person.age}}</td>
-          <td *ngFor="let hob of hobby | async">
-            {{hobby.hob}}
-          </td>
           <td><button (click)="deletePerson(person.id)" class="btn btn-danger">Delete</button>
             <button (click)="personDetails(person.id)" class="btn btn-info" style="margin-left: 10px">Details</button>
             <button (click)="updatePerson(person.id)" class="btn btn-info" style="margin-left: 10px">Update</button>

@@ -17,7 +17,7 @@ const httpOptions = {
 export class PersonService {
 
 
-  private baseUrl = 'person-api/person-project/v1/persons';
+  private baseUrl = 'https://person-project-heroku.herokuapp.com/person-project/v1/persons';
 
   constructor(private http: HttpClient) { }
 

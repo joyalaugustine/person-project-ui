@@ -41,7 +41,7 @@ export class PersonService {
   }
 
   deletePerson(id: number): Observable<any> {
-    return this.http.delete(`${this.baseUrl}/${id}`, { responseType: 'text' });
+    return this.http.post(`${this.baseUrl}/delete`, id, httpOptions);
   }
 
   getPersonsList(): Observable<any> {

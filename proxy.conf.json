@@ -1,6 +1,6 @@
 {
     "/person-api": {
-      "target": "http://localhost:8082",
+      "target": "https://person-project-heroku.herokuapp.com",
       "secure": false,
       "pathRewrite": {
         "^/person-api": ""

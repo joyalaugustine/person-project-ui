@@ -3,16 +3,30 @@
 <hr />
 <div *ngIf="person">
     <div>
-        <label><b>First Name: </b></label> {{person.firstName}}
+        <label><b>First Name: </b></label> &nbsp;&nbsp;{{person.firstName}}
     </div>
+    <br>
     <div>
-        <label><b>Last Name: </b></label> {{person.lastName}}
+        <label><b>Last Name: </b></label> &nbsp;&nbsp;{{person.lastName}}
     </div>
+    <br>
     <div>
-        <label><b>Age: </b></label> {{person.age}}
+        <label><b>Age: </b></label> &nbsp;&nbsp;{{person.age}}
     </div>
+    <br>
+    <div>
+        <label><b>Favourite Colour: </b></label> &nbsp;&nbsp;{{person.favouriteColour}}
+    </div>
+    <br>
+    <div>
+        <label><b>Hobby: </b></label> <span class="badge badge badge-warning" *ngFor="let hobbyValue of person.hobby"
+            style="margin-left: 10px">
+            {{hobbyValue}}</span>
+    </div>
+
+
 </div>
 
 <br>
 <br>
-<button (click)="list()" class="btn btn-primary">Back to Person List</button><br>
+<button (click)="list()" class="btn btn-outline-primary">Back to Person List</button><br>

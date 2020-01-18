@@ -17,9 +17,14 @@
           <td>{{person.firstName}}</td>
           <td>{{person.lastName}}</td>
           <td>{{person.age}}</td>
-          <td><button (click)="deletePerson(person.id)" class="btn btn-danger">Delete</button>
-            <button (click)="personDetails(person.id)" class="btn btn-info" style="margin-left: 10px">Details</button>
-            <button (click)="updatePerson(person.id)" class="btn btn-info" style="margin-left: 10px">Update</button>
+          <td>
+            <li  *ngFor="let hobbyValue of person.hobby"  style="margin-left: 10px">
+              {{hobbyValue}}</li>
+          </td>
+          <td>
+            <button (click)="personDetails(person.id)" class="btn btn-outline-info">Find out favourite colour</button>
+            <button (click)="updatePerson(person.id)" class="btn btn-outline-success" style="margin-left: 10px">Update</button>
+            <button (click)="deletePerson(person.id)" class="btn btn-outline-danger" style="margin-left: 10px">Delete</button>
           </td>
         </tr>
       </tbody>
